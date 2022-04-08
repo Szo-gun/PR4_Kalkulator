@@ -5,6 +5,13 @@ logging.basicConfig(level=logging.DEBUG)
 action = input("Jakie zadanie chcesz wykonać? \n [1] Dodawanie \n [2] Odejmowanie \n [3] Mnożenie \n [4] Dzielnie \n")
 action_int = int(action)
 if action_int == 1:
+    ile = int(input("Podaj ilość liczb które chcesz dodać: "))
+    wynik = 0
+    for i in range(0, ile):
+        liczba = int(input("Podaj liczbę: "))
+        wynik = wynik + liczba
+    print(f"Wynik dodowania podanych liczb: {wynik}")
+    """
     number_1 = int(input("Podaj pierwszą liczbę:"))
     number_2 = int(input("Podaj drugą liczbę:"))
     def action_1(number_1, number_2):
@@ -12,6 +19,7 @@ if action_int == 1:
         logging.debug(f"Dodaję {number_1} i {number_2}")
         logging.debug(result)
     action_1(number_1, number_2)
+    """
 elif action_int ==2:
     def action_2(number_1, number_2):
         result = number_1 - number_2
@@ -21,6 +29,8 @@ elif action_int ==2:
     number_2 = int(input("Podaj drugą liczbę:"))
     action_2(number_1, number_2)
 elif action_int == 3:
+    """
+    
     def action_3(number_1, number_2):
         result = number_1 * number_2
         logging.debug(f"Mnożę {number_1} i {number_2}")
@@ -28,6 +38,13 @@ elif action_int == 3:
     number_1 = int(input("Podaj pierwszą liczbę:"))
     number_2 = int(input("Podaj drugą liczbę:"))
     action_3(number_1, number_2)
+    """
+    ile = int(input("Podaj ilość liczb, które chcesz pomnożyć: "))
+    wynik = 1
+    for i in range (0, ile):
+        liczba = int(input("Podaj liczbę: "))
+        wynik = wynik * liczba
+    print(f"Wynik mnożenia: {wynik}")
 elif action_int == 4:
     def action_4(number_1, number_2):
         result = number_1 / number_2
